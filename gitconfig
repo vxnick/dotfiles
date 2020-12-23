@@ -1,0 +1,13 @@
+# Additional config may be in ~/.config/git/config
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+[core]
+	autocrlf = input
+	editor = code --wait
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+

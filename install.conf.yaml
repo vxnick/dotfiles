@@ -1,0 +1,45 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      quiet: true
+
+- create:
+    - ~/bin
+    - ~/lib
+    - ~/pkg
+    - ~/src
+    - ~/tmp
+
+- link:
+    ~/.Brewfile:
+    ~/.gitconfig:
+    # Fish shell
+    ~/.config/fish/completions: fish/completions
+    ~/.config/fish/conf.d: fish/conf.d
+    ~/.config/fish/functions: fish/functions
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fish_plugins: fish/fish_plugins
+
+- shell:
+    - description: Add Homebrew GitHub token
+      command: |
+        security find-generic-password -a $USER -s 'Homebrew GitHub Token' \
+          || security add-generic-password -a "$USER" -s 'Homebrew GitHub Token' -w
+      stdin: true
+    - description: Install Xcode CLI
+      command: xcode-select --install || true
+
+- brewfile:
+    file: Brewfile
+    no-lock: true
+    stdout: true
+
+- shell:
+    - description: Set Fish shell
+      command: \[ $SHELL = "/usr/local/bin/fish" \] || chsh -s /usr/local/bin/fish
+    - description: Load iTerm2 preferences
+      command: |
+        defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+        defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
