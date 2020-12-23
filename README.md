@@ -1,6 +1,6 @@
 # Dotfiles
 
-This dotfiles repository uses [Dotbit](https://github.com/anishathalye/dotbot).
+This dotfiles repository uses [Dotbot](https://github.com/anishathalye/dotbot).
 
 ## Installation
 
