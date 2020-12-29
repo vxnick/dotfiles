@@ -10,4 +10,7 @@
     tool = default-difftool
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
-
+[pull]
+	rebase = false
+[push]
+	default = current
