@@ -13,8 +13,10 @@
     - ~/tmp
 
 - link:
+    ~/.asdfrc:
     ~/.Brewfile:
     ~/.gitconfig:
+    ~/.tool-versions:
     # Fish shell
     ~/.config/fish/completions: fish/completions
     ~/.config/fish/conf.d: fish/conf.d
