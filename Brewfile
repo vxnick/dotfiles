@@ -8,6 +8,7 @@ tap "wata727/tflint"
 
 brew "alphabetum/taps/hosts"
 brew "asdf"
+brew "bat"
 brew "curl"
 brew "findutils"
 brew "fish"
