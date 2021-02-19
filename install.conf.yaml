@@ -24,15 +24,6 @@
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/fish_plugins: fish/fish_plugins
 
-- shell:
-    - description: Add Homebrew GitHub token
-      command: |
-        security find-generic-password -a $USER -s 'Homebrew GitHub Token' \
-          || security add-generic-password -a "$USER" -s 'Homebrew GitHub Token' -w
-      stdin: true
-    - description: Install Xcode CLI
-      command: xcode-select --install || true
-
 - brewfile:
     file: Brewfile
     no-lock: true
