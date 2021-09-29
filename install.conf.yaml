@@ -16,6 +16,7 @@
     ~/.asdfrc:
     ~/.Brewfile:
     ~/.gitconfig:
+    ~/.tmux.conf:
     ~/.tool-versions:
     # Fish shell
     ~/.config/fish/completions: fish/completions

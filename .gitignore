@@ -1,0 +1,3 @@
+fish/completions
+fish/functions/fisher.fish
+fish/functions/gcloud_sdk_argcomplete.fish
